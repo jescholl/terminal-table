@@ -15,7 +15,6 @@ jobs:
             - v1-bundle-{{ .Environment.CIRCLE_JOB }}-
       - run:
           name: Bundle install
-          #(gem uninstall -ax bundler || true)
           command: >
             gem install bundler -i vendor/bundle $BUNDLER_INSTALL_ARGS
             && bundle install --path vendor/bundle
